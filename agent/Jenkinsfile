@@ -3,10 +3,8 @@ pipeline {
 
     parameters {
         string(name: 'PARAM_STRING', defaultValue: 'input_string_param', description: 'This is a string parameter')
-        choice(name: 'BROWSER', choices: 'CHROME, 
-                                        SAFARI, 
-                                        FIREFOX', description: 'This is a choice parameter')
-        choice(name: 'BUILDTOOL', choices: 'MAKE, MAVEN, JENKINS', description: 'This is a choice parameter')
+        choice(name: 'BROWSER', choices: ['CHROME,SAFARI,FIREFOX'], description: 'This is a choice parameter')
+        choice(name: 'BUILDTOOL', choices: ['MAKE, MAVEN, JENKINS'], description: 'This is a choice parameter')
     }
 
     stages {
